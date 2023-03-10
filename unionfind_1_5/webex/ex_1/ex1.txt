@@ -1,0 +1,3 @@
+True or false. In the quick union implementation, suppose we set parent[p] to parent[root(q)] instead of setting parent[root(p)] to parent[root(q)]. Would the resulting algorithm be correct?
+
+No, because it would violate principle of transition.
