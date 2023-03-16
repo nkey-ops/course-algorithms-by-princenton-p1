@@ -1,6 +1,5 @@
-//package unionfind_1_5.assignment; //remove package
+package unionfind_1_5.assignment;
 
-import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
@@ -26,9 +25,9 @@ public class PercolationStats {
     		throw new IllegalArgumentException(
     				"n or trials cannot be lower or equal to zero");
     	
-    	int[] fractionsOfOpenSites = new int[n];
+    	int[] fractionsOfOpenSites = new int[trials];
     	
-    	for (int i = 0; i < n; i++) {
+    	for (int i = 0; i < trials; i++) {
     		Percolation p = new Percolation(n);
     		
     		while (!p.percolates()) {
@@ -75,11 +74,8 @@ public class PercolationStats {
 
    // test client (see below)
    public static void main(String[] args) {
-	   int n = StdIn.readInt();
-	   int t = StdIn.readInt();
-
-//	   int n = 200;
-//	   int t = 100;
+	   int n = Integer.parseInt(args[0]);
+	   int t = Integer.parseInt(args[1]);
 	   
 	   PercolationStats p = new PercolationStats(n, t);
    
