@@ -1,6 +1,6 @@
-package analysis_1_4.cp;
+package analysis_1_4.cp.ex_20;
 
-public class BitonicSearch_20 {
+public class BitonicSearch {
 
 	public static void main(String[] args) {
 		int[] arr = new int[] { 24, 69, 100, 99, 79, 78, 67, 36, 26, 19 };

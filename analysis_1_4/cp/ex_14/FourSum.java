@@ -1,12 +1,12 @@
-package analysis_1_4.cp;
+package analysis_1_4.cp.ex_14;
 
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.Stopwatch;
 
-public class FourSum_14 {
+public class FourSum {
 
-	private FourSum_14 () { }
+	private FourSum () { }
 	
 	private static void printAll(int[] a ) {
 		for (int i = 0; i < a.length; i++) {

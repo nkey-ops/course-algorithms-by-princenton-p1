@@ -1,8 +1,8 @@
-package analysis_1_4.cp;
+package analysis_1_4.cp.ex_24;
 
-import java.util.Random;
+import edu.princeton.cs.algs4.StdRandom;
 
-public class ThrowingEggs_24 {
+public class ThrowingEggs {
 		
 	private static class Egg {
 		
@@ -23,11 +23,9 @@ public class ThrowingEggs_24 {
 	
 	
 	public static void main(String[] args) {
-		Random r = 	new Random();
-		
 		for (int i = 0; i < 10; i++) {
-			int h = r.nextInt(1, 100);
-			int eH = r.nextInt(1, h + 1);
+			int h = StdRandom.uniformInt(1, 100);
+			int eH = StdRandom.uniformInt(1, h + 1);
 			Egg e =  new Egg(eH);
 
 			int act = floorLgN(h, e);
@@ -37,8 +35,8 @@ public class ThrowingEggs_24 {
 		}
 
 		for (int i = 0; i < 10; i++) {
-			int h = r.nextInt(1, 100);
-			int eH = r.nextInt(1, h + 1);
+			int h = StdRandom.uniformInt(1, 100);
+			int eH = StdRandom.uniformInt(1, h + 1);
 			Egg e =  new Egg(eH);
 			
 			int act = floor2LgF(h, e);

@@ -1,4 +1,4 @@
-package analysis_1_4.cp;
+package analysis_1_4.cp.ex_34;
 
 import java.util.Random;
 
