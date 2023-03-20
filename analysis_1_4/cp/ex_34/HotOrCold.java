@@ -1,6 +1,6 @@
 package analysis_1_4.cp.ex_34;
 
-import java.util.Random;
+import edu.princeton.cs.algs4.StdRandom;
 
 /**
  * 
@@ -19,7 +19,7 @@ import java.util.Random;
  *	
  *@author deuru
  */
-public class HotOrCold_34 {
+public class HotOrCold {
 	private static class Termostat {
 		private final int num;
 		
@@ -47,11 +47,9 @@ public class HotOrCold_34 {
 	}
 	
 	public static void main(String[] args) {
-		Random r = 	new Random();
-		
-		for (int i = 0; i < 1000; i++) {
-			int n = r.nextInt(1, 100);
-			int aim = n == 1 ? 1 :  r.nextInt(1, n);
+		for (int i = 0; i < 10; i++) {
+			int n = StdRandom.uniformInt(1, 100);
+			int aim = n == 1 ? 1 : StdRandom.uniformInt(1, n);
 			Termostat t =  new Termostat(aim);
 
 			int act = findSecretInteger(n, t);
