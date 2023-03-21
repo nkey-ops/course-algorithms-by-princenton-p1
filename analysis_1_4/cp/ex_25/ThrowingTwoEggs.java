@@ -2,7 +2,7 @@ package analysis_1_4.cp.ex_25;
 
 import java.util.Random;
 
-public class ThrowingTwoEggs_25_inc {
+public class ThrowingTwoEggs {
 
 	public static void main(String[] args) {
 		Random r = new Random();
