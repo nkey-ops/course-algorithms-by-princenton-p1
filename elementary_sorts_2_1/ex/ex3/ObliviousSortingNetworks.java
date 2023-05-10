@@ -1,4 +1,4 @@
-package elementary_sorts_2_1.ex.ex2;
+package elementary_sorts_2_1.ex.ex3;
 
 public class ObliviousSortingNetworks {
 	public static void main(String[] args) {
