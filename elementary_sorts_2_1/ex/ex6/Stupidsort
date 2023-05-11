@@ -1,0 +1,33 @@
+Stupidsort. 
+Analyze the running time (worst case and best case), 
+	correctness, and stability of the following sorting algorithm. 
+Scan the array from left to right until you find 
+	two consecutive items that are out-of-place. 
+Swap them, and start over from the beginning. 
+Repeat until the scan reaches the end of the array.
+
+    for (int i = 1; i < N; i++) {
+       if (less(a[i], a[i-1])) {
+          exch(i, i-1);
+          i = 0;
+       }
+    }
+
+   Worst Case O(n^3)
+   Best Case (n)
+   
+   
+ Consider also the following recursive variant and analyze the worst case memory usage.
+
+    public static void sort(Comparable[] a) {
+       for (int i = 1; i < a.length; i++) {
+          if (less(a[i], a[i-1])) {
+             exch(i, i-1);
+             sort(a);
+          }
+       }
+    }
+  
+   Worst Case O(n^4) 
+   Best Case  O(n) 
+  
