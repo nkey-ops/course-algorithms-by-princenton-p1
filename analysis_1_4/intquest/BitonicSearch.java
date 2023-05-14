@@ -16,35 +16,35 @@ public class BitonicSearch {
 		System.out.println("Is " + 91 + " present " + contains3lgN(arr, 91));
 	}
 
-	private static boolean contains2lgN(int[] a, int v) {
-		int high = a.length - 2;
-		int low = 0,mid = high;
-
-		boolean isLeftWing = true;
-
-		while (low <= high) {
-
-			if (a[mid] == v)
-				return true;
-
-			if (isLeftWing ? v > a[mid] : v < a[mid])
-				low = mid + 1;
-			else
-				high = mid - 1;
-
-			// v was't found in increasing side go to the decreasing
-			if (low > high && isLeftWing) {
-				low = high + 1;
-				high = a.length - 1;
-				isLeftWing = false;
-			}
-
-			mid = low + (high - low) / 2;
-
-		}
-
-		return false;
-	}
+//	private static boolean contains2lgN(int[] a, int v) {
+//		int high = a.length - 2;
+//		int low = 0,mid = high;
+//
+//		boolean isLeftWing = true;
+//
+//		while (low <= high) {
+//
+//			if (a[mid] == v)
+//				return true;
+//
+//			if (isLeftWing ? v > a[mid] : v < a[mid])
+//				low = mid + 1;
+//			else
+//				high = mid - 1;
+//
+//			// v was't found in increasing side go to the decreasing
+//			if (low > high && isLeftWing) {
+//				low = high + 1;
+//				high = a.length - 1;
+//				isLeftWing = false;
+//			}
+//
+//			mid = low + (high - low) / 2;
+//
+//		}
+//
+//		return false;
+//	}
 
 
 
