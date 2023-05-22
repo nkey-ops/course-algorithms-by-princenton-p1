@@ -10,6 +10,7 @@ import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 import elementary_sorts_2_1.exp.ex23_24.InsertionX;
+import merge_sort_2_2.cp.MergeX;
 
 public class SortCompare {
 	public static double time(String alg, Double[] a) {
@@ -21,13 +22,14 @@ public class SortCompare {
 		case "Selection" -> Selection.sort(a);
 		case "Shell" -> Shell.sort(a);
 		case "Merge" -> Merge.sort(a);
+		case "MergeX" -> MergeX.sort(a);
 		case "Quick" -> Quick.sort(a);
 		case "Heap" -> Heap.sort(a);
 		}
 
 		double elapsedTime = timer.elapsedTime();
 
-				return elapsedTime;
+		return elapsedTime;
 	}
 
 	
