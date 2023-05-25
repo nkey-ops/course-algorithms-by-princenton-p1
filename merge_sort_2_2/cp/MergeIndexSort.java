@@ -13,7 +13,7 @@ import utils.Utils;
  *   but returns an int[] perm such that perm[i] is
  *   the index of the ith smallest entry in the array.
  */
-public class IndexSort {
+public class MergeIndexSort {
 	
 	public static void main(String[] args) {
 		Integer[] a = Utils.permutation(args.length == 1 ? Integer.parseInt(args[0]) : 10);

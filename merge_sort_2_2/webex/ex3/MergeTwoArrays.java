@@ -1,4 +1,4 @@
-package merge_sort_2_2.webex.ex1;
+package merge_sort_2_2.webex.ex3;
 
 import static java.lang.Integer.parseInt;
 import static utils.Utils.isSortedAsc;
