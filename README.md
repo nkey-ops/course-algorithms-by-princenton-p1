@@ -104,7 +104,6 @@ Program in execution
 
   
 <h2>ASSESSMENT SUMMARY</h2>
-<pre>
 
 Compilation:  <font color = #009900>PASSED</font>
 API:          <font color = #009900>PASSED</font>
@@ -120,6 +119,18 @@ Timing:       <font color = #009900>41/41 tests passed</font>
 Aggregate score: 100.00%
 [ Compilation: 5%, API: 5%, Style: 0%, Correctness: 60%, Timing: 10%, Memory: 20% ]
 </pre>
-   
-   
+ 
+<p>
+<b>The problem.</b>
+Given a set of <em>n</em> distinct points in the plane, 
+find every (maximal) line segment that connects a subset of 4 or more of the points.
+<p>
+
+
+![image](https://github.com/nkey-ops/course-algorithms-by-princenton-p1/assets/81760194/485dc9c3-f239-4001-8628-3adfdfc3f33d)
+
+ 
+Brute force. Write a program BruteCollinearPoints.java that examines 4 points at a time and checks whether they all lie on the same line segment, returning all such line segments. The order of growth of the running time of the program will be n4 in the worst case and it will use space proportional to n plus the number of line segments returned. 
+
+A faster, sorting-based solution. Remarkably, it is possible to solve the problem much faster than the brute-force solution described above. The growth of the running time of the program will be n2 log n in the worst case and it will use space proportional to n plus the number of line segments returned.
    
