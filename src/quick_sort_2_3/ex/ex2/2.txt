@@ -1,0 +1,23 @@
+Show, in the style of the quicksort trace, 
+how quicksort sorts the array E A S Y Q U E S T I O N. 
+(For the purposes of this exercise, ignore the initial shuffle.)     
+
+lo  j  hi   0 1 2 3 4 5 6 7 8 9 10 11 
+Input       E A S Y Q U E S T I O N
+shuffle     S N O T E I Y S Q U A E
+                            
+0   8  11   S N O E E I A Q s U Y T 
+0   7  7    Q N O E E I A s S U Y T 
+0   6  6    A N O E E I q S S U Y T 
+0   0  5    a N O E E I Q S S U Y T 
+1   4  5    A E I E n O Q S S U Y T 
+1   2  3    A E e I N O Q S S U Y T 
+1      1    A e E I N O Q S S U Y T 
+3      3    A E E i N O Q S S U Y T 
+5      5    A E E I N o Q S S U Y T 
+
+9  10  11   A E E I N O Q S S T u Y 
+9       9   A E E I N O Q S S t U Y 
+11     11   A E E I N O Q S S T U y 
+
+Result      A E E I N O Q S S T U Y 
