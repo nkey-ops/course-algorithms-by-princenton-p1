@@ -11,6 +11,7 @@ import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 import elementary_sorts_2_1.exp.ex23_24.InsertionX;
 import merge_sort_2_2.cp.MergeX;
+import quick_sort_2_3.webex.ex2.RandomizedQuicksort;
 
 public class SortCompare {
 	public static double time(String alg, Double[] a) {
@@ -23,7 +24,8 @@ public class SortCompare {
 		case "Shell" -> Shell.sort(a);
 		case "Merge" -> Merge.sort(a);
 		case "MergeX" -> MergeX.sort(a);
-		case "Quick" -> Quick.sort(a);
+		case "quick" -> Quick.sort(a);
+		case "rquick" -> RandomizedQuicksort.sort(a);
 		case "Heap" -> Heap.sort(a);
 		}
 
