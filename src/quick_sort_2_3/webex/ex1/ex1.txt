@@ -1,0 +1,54 @@
+QuickKR.java is one of the simplest quicksort implementations, 
+and appears in K+R. 
+Convince yourself that it is correct.
+How will it perform? All equal keys? 
+
+
+The main work is done by
+selecting from lo + 1 to hi values and 
+comparing them with lo:
+    add lowest to the left half 
+    add highest to the right (roughly saying)
+
+Place lo between lowest and highest
+Make recursion calls for lowest and highes values 
+(exclude one that was used to compare them all)
+ 
+
+In the worst case if all values are equal 
+    recusive call starts with bounds lo to lo for lower values
+    and lo + 1 to  hi for high values
+
+It's evident that in this case
+each new recusion will select hi - lo - 1 values
+(removes only 1 value from the list)
+
+That is equal to N * (N - 1)
+
+
+Best Case: 
+Worst Case: O(N * (N - 1))
+Worst Space: N
+
+public class QuickKR {
+
+    public static void sort(Comparable[] a) {
+        sort(a, 0, a.length - 1);
+    }
+
+    private static void sort(Comparable[] a, int lo, int hi) {
+        if (hi <= lo) return;
+
+        int mid = lo + (hi - lo) / 2;
+        exch(a, lo, mid);  // use middle element as partition
+
+        int last = lo;
+        for (int i = lo + 1; i <= hi; i++)
+            if (less(a[i], a[lo])) exch(a, ++last, i);
+
+        exch(a, lo, last);
+
+        sort(a, lo, last-1);
+        sort(a, last+1, hi);
+    }
+}
