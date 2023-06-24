@@ -1,0 +1,50 @@
+Bad partitioning. 
+How does not stopping on equal keys make quicksort 
+go quadratic when all keys are equal? 
+
+
+On all keys a equal input
+ Default workflow if equal key is encountered:
+    Element at index i encounters equal key
+        stops iterations : preserve key index
+    Element at index j encounters equal key
+        stops iterations : preserve key index
+    
+    Swaps equal keys
+    Repeat cycly till i and j are crossed;
+   
+ Result: each partion call will divide the selected array area into two equal parts
+
+
+ Workflow If array doesn't stop at equal key
+    Element at index i encounters equal key
+        continues
+        stops cycle when i == hi  
+    Skips j-loop    
+    Breaks outer loop 
+
+ Result: each partition call will remove only one
+         element from the selection between lo to hi
+    It leads to  N * N - 1 performace
+
+
+private static int partition(Comparable[] a, int lo, int hi)
+{ // Partition into a[lo..i-1], a[i], a[i+1..hi].
+    int i = lo, j = hi+1;
+    // left and right scan indices
+    Comparable v = a[lo];
+    // partitioning item
+    while (true)
+    { // Scan right, scan left, check for scan complete, and exchange.
+        while (less(a[++i], v)) if (i == hi) break;
+        while (less(v, a[--j])) if (j == lo) break;
+        if (i >= j) break;
+        exch(a, i, j);
+    }
+    exch(a, lo, j);
+    // Put v = a[j] into position
+    return j;
+    // with a[lo..j-1] <= a[j] <= a[j+1..hi].
+}
+
+
