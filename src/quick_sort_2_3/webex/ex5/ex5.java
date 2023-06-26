@@ -2,8 +2,6 @@ package quick_sort_2_3.webex.ex5;
 
 import java.util.Arrays;
 
-import edu.princeton.cs.algs4.StdRandom;
-
 /**
  * Comparing an item against itself. 
  * Show that our implementation of quicksort can compare 
@@ -13,10 +11,8 @@ import edu.princeton.cs.algs4.StdRandom;
 
 public class ex5 {
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         int[] arr = new int[]{1,2,3,4,5,6};
-        //for (int i = 0; i < n; i++) 
-        //    arr[i] = StdRandom.uniformInt(n);
         
         System.out.println("Array: " + Arrays.toString(arr));
 
