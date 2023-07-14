@@ -1,0 +1,29 @@
+Suppose that the sequence
+
+    P R I O * R * * I * T * Y * * * Q U E * * * U * E
+
+(where a letter means insert and an asterisk means remove the maximum) 
+is applied to an initially empty priority queue. 
+Give the sequence of values returned by remove the maximum operations. 
+
+
+P R I O       
+            R 
+P I O R       
+            R       
+            p
+I O I       
+            O
+I I T    
+            T        
+I I Y 
+            Y 
+            I
+            I
+Q U E
+            U
+            Q 
+            E 
+U
+            U
+E
