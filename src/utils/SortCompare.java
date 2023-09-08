@@ -11,6 +11,7 @@ import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 import elementary_sorts_2_1.exp.ex23_24.InsertionX;
 import merge_sort_2_2.cp.MergeX;
+import quick_sort_2_3.cp.ex18.MedianOf3Partittioning;
 import quick_sort_2_3.webex.ex2.RandomizedQuicksort;
 
 public class SortCompare {
@@ -26,6 +27,7 @@ public class SortCompare {
 		case "MergeX" -> MergeX.sort(a);
 		case "quick" -> Quick.sort(a);
 		case "rquick" -> RandomizedQuicksort.sort(a);
+        case "medq" -> MedianOf3Partittioning.sort(a);
 		case "Heap" -> Heap.sort(a);
 		}
 
@@ -64,16 +66,13 @@ public class SortCompare {
 		int N = Integer.parseInt(args[2]);
 		int T = Integer.parseInt(args[3]);
 		
-		if (!isSorted(alg1))
-			throw new RuntimeException(alg1 + " Didn't sort an array");
-		if (!isSorted(alg2))
-			throw new RuntimeException(alg2 + " Didn't sort an array");
+		assert isSorted(alg1) && isSorted(alg2);
 
 
 		double t1 = timeRandomInput(alg1, N, T); // total for alg1
 		double t2 = timeRandomInput(alg2, N, T); // total for alg2
 		StdOut.printf("For %d random Doubles\n %s is", N, alg1);
-		StdOut.printf(" %.1f times faster than %s\n", t2 / t1, alg2);
+		StdOut.printf(" %.5f times faster than %s\n", t2 / t1, alg2);
 	}
 
 /***************************************************************************
