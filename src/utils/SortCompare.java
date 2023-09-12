@@ -11,7 +11,8 @@ import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 import elementary_sorts_2_1.exp.ex23_24.InsertionX;
 import merge_sort_2_2.cp.MergeX;
-import quick_sort_2_3.cp.ex18.MedianOf3Partittioning;
+import quick_sort_2_3.cp.ex18.MedianOf3Partitioning;
+import quick_sort_2_3.cp.ex19.MedianOf5Partitioning;
 import quick_sort_2_3.webex.ex2.RandomizedQuicksort;
 
 public class SortCompare {
@@ -27,9 +28,11 @@ public class SortCompare {
 		case "MergeX" -> MergeX.sort(a);
 		case "quick" -> Quick.sort(a);
 		case "rquick" -> RandomizedQuicksort.sort(a);
-        case "medq" -> MedianOf3Partittioning.sort(a);
+        case "med3q" -> MedianOf3Partitioning.sort(a);
+        case "med5q" -> MedianOf5Partitioning.sort(a);
 		case "Heap" -> Heap.sort(a);
-		}
+        default ->  throw new IllegalArgumentException(alg);	
+        }
 
 		double elapsedTime = timer.elapsedTime();
 
@@ -71,8 +74,11 @@ public class SortCompare {
 
 		double t1 = timeRandomInput(alg1, N, T); // total for alg1
 		double t2 = timeRandomInput(alg2, N, T); // total for alg2
-		StdOut.printf("For %d random Doubles\n %s is", N, alg1);
-		StdOut.printf(" %.5f times faster than %s\n", t2 / t1, alg2);
+		StdOut.printf("%s: %.5f\n", alg1, t1);
+		StdOut.printf("%s: %.5f\n", alg2, t2);
+		StdOut.printf("For %d random Doubles\n%s is ", N, alg1);
+		StdOut.printf("%.5f times %s than %s\n", t2 / t1, 
+                t2 / t1 > 1 ? "faster" : "slower" , alg2);
 	}
 
 /***************************************************************************

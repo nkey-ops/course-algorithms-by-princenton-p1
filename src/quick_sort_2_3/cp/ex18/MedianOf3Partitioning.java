@@ -13,10 +13,12 @@ import edu.princeton.cs.algs4.StdRandom;
  *
  * Results: 
  *
- *   algorithms/src/utils$ jal SortCompare.java medq quick
- *   50000 1000 
- *   For 50000 random Doubles and 1000 repeats
- *   MedianOf3Partittioning is 0.77853 times faster than QuickSort 
+ *  deuru@local:~/table/space/algorithms/src/utils$ jal -ea SortCompare.java quick 
+ *  med3q 10000 10000
+ *  quick: 14.24200
+ *  med3q: 10.23500
+ *  For 10000 random Doubles
+ *  quick is 0.71865 times slower than med3q
  */
 
 
@@ -55,33 +57,24 @@ public class MedianOf3Partitioning {
 
     private static <T> int partition(Comparable<T>[] arr, int l, int h) {
 
-       Comparable<T> v;
+       Comparable<T> v ;
 
-        if(h - l + 1 < 3)  v = arr[l]; 
+        
+        if(h - l + 1 == 2)  v = arr[l]; 
         else {
-             Comparable<T>  a = arr[l], 
-                                  b = arr[l + 1], 
-                                  c = arr[l + 2];
+            int i = l + (h - l) / 2;
+            v = medianThree(arr[l], arr[i], arr[h]);
 
-             v = isLess(a, b) ? 
-                             (isLess(b, c) ?    
-                                     b : 
-                                     (isLess(a, c) ? c : a)) :
-                             (isLess(a, c) ?  
-                                      a :
-                                     (isLess(b, c) ? c : b)); 
-
-             if     (v == b) exch(arr, l, l + 1);
-             else if(v == c) exch(arr, l, l + 2);
+             if     (v == arr[i]) exch(arr, l, i);
+             else if(v == arr[h]) exch(arr, l, h);
         }
 
         int i = l, j = h + 1;
         while(true) {
-            
-
             while(isLess(arr[++i], v ) && i < h);
             while(isLess(v, arr[--j]) && j > l);
 
+            // find item on lo to swap
             if(j <= i) break;
             
 
@@ -93,6 +86,17 @@ public class MedianOf3Partitioning {
         return j;
     }
 
+
+   private  static <T> Comparable<T> medianThree(
+                         Comparable<T> a,
+                         Comparable<T> b,  Comparable<T> c) {
+    if ((isLess(b, a)) ^ (isLess(c, a))) 
+        return a;
+    else if (isLess(b, a) ^ isLess(b, c)) 
+        return b;
+    else
+        return c;
+  } 
     private static <T> void exch(Comparable<T>[] arr, int i, int j) {
         Comparable<T>  tmp = arr[i]; 
         arr[i] = arr[j];
