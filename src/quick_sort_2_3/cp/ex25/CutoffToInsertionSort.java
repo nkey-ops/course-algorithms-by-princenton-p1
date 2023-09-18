@@ -129,8 +129,8 @@ public class CutoffToInsertionSort {
     }
 
     private static <T> void sort(Comparable<T>[] a, int lo, int hi, int m) {
-        if (hi - lo <= m) {
-            insertionSort(a, lo, hi);
+        if (hi - lo + 1 <= m) {
+            insertionSort(a, lo, hi + 1);
             return;
         }
         
