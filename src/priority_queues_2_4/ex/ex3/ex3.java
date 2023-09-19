@@ -1,4 +1,4 @@
-package priority_queues_2_4.ex.ex2;
+package priority_queues_2_4.ex.ex3;
 
 import java.util.Arrays;
 
@@ -17,7 +17,7 @@ import edu.princeton.cs.algs4.StdRandom;
  * for each of your four implementations from the previous exercise.
  *
  */
-public class ex2 {
+public class ex3 {
 
     public static void main(String... args) {
         int[] arr = StdRandom.permutation(

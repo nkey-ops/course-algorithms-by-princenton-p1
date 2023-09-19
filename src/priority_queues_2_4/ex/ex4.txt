@@ -1,0 +1,4 @@
+Is an array that is sorted in decreasing order a max-oriented heap. 
+
+Answer: 
+If take the value from from the beginning it would be a max-oriented heap.
