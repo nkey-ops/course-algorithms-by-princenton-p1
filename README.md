@@ -2,7 +2,7 @@
 <pre>
  
 Program in execution
-![hippo](https://user-images.githubusercontent.com/81760194/225597366-573bb944-81cd-42c9-9c3c-d972b2ce1f7a.gif)
+![hippo](https://github.com/nkey-ops/course-algorithms-by-princenton-p1/assets/81760194/ad3a04e2-5389-4187-9ee2-54b94b7540aa)
 
 <h2>ASSESSMENT SUMMARY</h2>
 
