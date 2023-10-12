@@ -1,11 +1,11 @@
-<p><h2>Programming Assignment: Percolation<h2> 
-<pre>
+<p><h2>Programming Assignment: Percolation</h2>
+
+<h3>Program in execution</h3>  
  
-Program in execution
 ![hippo](https://github.com/nkey-ops/course-algorithms-by-princenton-p1/assets/81760194/ad3a04e2-5389-4187-9ee2-54b94b7540aa)
 
-<h2>ASSESSMENT SUMMARY</h2>
-
+<h3>ASSESSMENT SUMMARY</h3>
+<pre>
 Compilation:  <font color = #009900>PASSED</font>
 API:          <font color = #009900>PASSED</font>
 
@@ -22,9 +22,7 @@ Aggregate score: 101.25%
 </pre>
 
 
-
-
-<p><b>Percolation.</b>
+</p><b>Percolation.</b>
 Given a composite systems comprised of randomly distributed insulating and metallic
 materials: what fraction of the materials need to be metallic so that the composite system is an 
 electrical conductor? Given a porous landscape with water on the surface (or oil below),
@@ -33,7 +31,7 @@ oil to gush through to the surface)?
 Scientists have defined an abstract process known as <em>percolation</em>
 to model such situations.
 
-<p><b>The model.</b>
+</p><b>The model.</b>
 We model a percolation system using an <em>n</em>-by-<em>n</em> grid of <em>sites</em>.
 Each site is either <em>open</em> or <em>blocked</em>.
 A <em>full</em> site is an open site
@@ -58,16 +56,16 @@ flowing from top to bottom.)
 ==============================================================================================================  
  <br>  
   
+ 
   
-  
-<p><b>Programming Assignment: Queues </b>
-<pre>   
+<p><h2>Programming Assignment: Queues </h2>
+<h3>Program in execution</h3> 
+ 
+ ![hippo](https://github.com/nkey-ops/course-algorithms-by-princenton-p1/assets/81760194/4ee9fcc8-a448-49b7-a96d-556e6d489dd6)
 
-Program in execution
-![hippo](https://github.com/nkey-ops/course-algorithms-by-princenton-p1/assets/81760194/4ee9fcc8-a448-49b7-a96d-556e6d489dd6)
 
-<h2>ASSESSMENT SUMMARY</h2>
-
+<h2>ASSESSMENT SUMMARY</h3>
+<pre>  
 Compilation:  <font color = #009900>PASSED (0 errors, 4 warnings)</font>
 API:          <font color = #009900>PASSED</font>
 
@@ -96,15 +94,13 @@ A double-ended queue or deque (pronounced “deck”) is a generalization of a s
 ==============================================================================================================  
  <br>  
   
-<p><h2>Programming Assignment: Collinear Points <h2> 
-<pre>
+<p><h2>Programming Assignment: Collinear Points </h2>
+<h3>Program in execution</h3>
 
-Program in execution
 ![hippo](https://github.com/nkey-ops/course-algorithms-by-princenton-p1/assets/81760194/7a5460ae-670c-47dd-9066-106d7efa96a1)
-
   
-<h2>ASSESSMENT SUMMARY</h2>
-
+<h3>ASSESSMENT SUMMARY</h3>
+<pre>
 Compilation:  <font color = #009900>PASSED</font>
 API:          <font color = #009900>PASSED</font>
 
@@ -130,7 +126,7 @@ find every (maximal) line segment that connects a subset of 4 or more of the poi
 ![image](https://github.com/nkey-ops/course-algorithms-by-princenton-p1/assets/81760194/485dc9c3-f239-4001-8628-3adfdfc3f33d)
 
  
-Brute force. Write a program BruteCollinearPoints.java that examines 4 points at a time and checks whether they all lie on the same line segment, returning all such line segments. The order of growth of the running time of the program will be n4 in the worst case and it will use space proportional to n plus the number of line segments returned. 
-
-A faster, sorting-based solution. Remarkably, it is possible to solve the problem much faster than the brute-force solution described above. The growth of the running time of the program will be n2 log n in the worst case and it will use space proportional to n plus the number of line segments returned.
+<b> Brute force. </b> Write a program BruteCollinearPoints.java that examines 4 points at a time and checks whether they all lie on the same line segment, returning all such line segments. The order of growth of the running time of the program will be n4 in the worst case and it will use space proportional to n plus the number of line segments returned. 
+</p>
+<b>A faster, sorting-based solution.</b> Remarkably, it is possible to solve the problem much faster than the brute-force solution described above. The growth of the running time of the program will be n2 log n in the worst case and it will use space proportional to n plus the number of line segments returned.
    
