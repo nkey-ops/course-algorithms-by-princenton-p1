@@ -130,3 +130,56 @@ find every (maximal) line segment that connects a subset of 4 or more of the poi
 </p>
 <b>A faster, sorting-based solution.</b> Remarkably, it is possible to solve the problem much faster than the brute-force solution described above. The growth of the running time of the program will be n2 log n in the worst case and it will use space proportional to n plus the number of line segments returned.
    
+<br>  
+  
+==============================================================================================================  
+ <br>  
+  
+<p><h2>Programming Assignment: Priority Queues </h2>
+<h3>Program in execution</h3>
+
+![hippo](https://github.com/nkey-ops/course-algorithms-by-princenton-p1/assets/81760194/14c669ef-6a31-4255-87ea-6095a5091b9a)
+
+<body>
+
+<h2>ASSESSMENT SUMMARY</h2>
+<pre>
+
+Compilation:  <font color = #009900>PASSED</font>
+API:          <font color = #009900>PASSED</font>
+
+SpotBugs:     <font color = #009900>PASSED</font>
+PMD:          <font color = #009900>PASSED</font>
+Checkstyle:   <font color = #990000>FAILED (0 errors, 95 warnings)</font>
+
+Correctness:  <font color = #009900>52/52 tests passed</font>
+Memory:       <font color = #009900>22/22 tests passed</font>
+Timing:       <font color = #009900>125/125 tests passed</font>
+
+Aggregate score: 100.00%
+[ Compilation: 5%, API: 5%, Style: 0%, Correctness: 60%, Timing: 10%, Memory: 20% ]
+</pre>
+
+Write a program to solve the 8-puzzle problem
+(and its natural generalizations) using the 
+A* search algorithm.
+
+<p><b>The problem.</b>
+The <a href = "http://en.wikipedia.org/wiki/Fifteen_puzzle">8-puzzle</a>
+is a sliding puzzle
+<!--  invented and popularized by Noyes Palmer Chapman in the 1870s. -->
+that is played on a 3-by-3 grid with 8 square tiles labeled 1 through 8, plus a blank 
+square. The goal is to rearrange the tiles so that they are in row-major order, using
+as few moves as possible. 
+You are permitted to slide tiles either horizontally or vertically
+into the blank square. 
+The following diagram
+shows a sequence of moves from an <em>initial board</em> (left)
+to the <em>goal board</em> (right).
+
+
+<p><center>
+<IMG src="https://coursera.cs.princeton.edu/algs4/assignments/8puzzle/4moves.png" width = "600" alt =  "8puzzle 4 moves">
+</center>
+
+[Full Assignment...](https://coursera.cs.princeton.edu/algs4/assignments/8puzzle/specification.php)
