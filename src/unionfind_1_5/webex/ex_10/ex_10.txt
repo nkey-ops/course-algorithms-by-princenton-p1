@@ -1,0 +1,29 @@
+Hex. 
+The game of Hex is played on a trapezoidal grid of hexagons.... 
+Describe how to detect when white or black has won the game.
+Use the union-find data structure. 
+
+To win a game of Hex a player should connect two opposite sides of a trapezoidal grid
+with the player's hexagons.
+
+1. Before the start of the game, each side can be united as a separate component
+where each hexagon of the side points to a component identifier that will represent this side.
+It means for one player there will be two sites that represent two opposite sides 
+with their component identifiers.
+
+2. After each placement of a hexagon all the adjacent hexagons (up to 6) if not empty will be 
+"united" with a newly placed one. 
+  a. If a newly placed hexagon is adjacent to the side or to the other hexagon
+     that is adjacent to the side, a new hexagon will be linked to the component identifier
+     of the side and not vice versa (to prevent destruction of a side component identifier
+     via swaps).
+  b. If both a newly placed hexagon and adjacent one have component identifiers of two opposite
+  sides (if the player "owns" them) arbitrarily link their component identifiers.
+  This union operation will lead to the victory of the player
+
+3. After each union two side component identifiers will be compared on equality 
+(whether they share the same value)
+  If they're equal last player that made a union operation won. 
+Note: this operation takes O(1) because they (sites) are component identifiers.
+
+
