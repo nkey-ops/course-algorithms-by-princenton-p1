@@ -1,0 +1,11 @@
+Hex. 
+Prove that the game cannot end in a tie.
+Hint: consider the set of cells reachable from the left side of the board. 
+
+To make a tie by separating opponent's sides is by definition is a win and cannot be a tie.
+
+Because to do that the player needs to 
+-> create a complete parallel to opponents side connection of cells.
+-> which means perpendicular to player's side.
+-> which means a connection between player's sides.
+-> which constitutes player's win. 
