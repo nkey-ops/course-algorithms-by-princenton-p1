@@ -1,9 +1,34 @@
 package elementary_sorts_2_1.ex.ex3;
 
-public class ObliviousSortingNetworks {
+import java.util.Arrays;
+
+import utils.Utils;
+
+/**
+ * <pre>
+ * Optimal oblivious sorting networks.
+ * Create a program that sorts four integers using only 5 if statements, and one that sorts
+ * five integers using only 9 if statements of the type above?
+ * Oblivious sorting networks are useful for implementing sorting algorithms in hardware.
+ * How can you check that your program works for all inputs?
+ * </pre>
+ */
+public class OptimalObliviousSortingNetworks {
+
 	public static void main(String[] args) {
-		sort4();
-		sort5();
+
+    for (byte[] arr : Utils.permutations(4)) {
+      System.out.print(Arrays.toString(arr) + " ");
+      sort(arr[0],arr[1],arr[2],arr[3]);
+    }
+
+    System.out.println();
+
+    for (byte[] arr : Utils.permutations(5)) {
+      System.out.print(Arrays.toString(arr) + " ");
+      sort(arr[0],arr[1],arr[2],arr[3],arr[4]);
+    }
+
 	}
 
 	
@@ -31,8 +56,7 @@ public class ObliviousSortingNetworks {
 							
 							if(!sort(a, b , c, d, e)) {
 								throw new RuntimeException(
-										String.format("%s, %s, %s, %s, %s", 
-												a, b, c, d, e));
+										String.format("%s, %s, %s, %s, %s", a, b, c, d, e));
 							}
 						}
 					}
@@ -51,6 +75,9 @@ public class ObliviousSortingNetworks {
 		if (B > D) { t = D; D = B; B = t; }
 		if (B > C) { t = B; B = C; C = t; }
 
+    System.out.printf("%s %s %s %s\n", A, B, C, D);
+
+    assert A <= B && B <= C && C <= D;
 		return A <= B && B <= C && C <= D;
 	}
 
@@ -67,6 +94,10 @@ public class ObliviousSortingNetworks {
 		if (B > D) { t = B; B = D; D = t; }
 		if (B > C) { t = B; B = C; C = t; }
 
+
+    System.out.printf("%s %s %s %s %s\n", A, B, C, D,E);
+
+    assert A <= B && B <= C && C <= D && D <= E;
 		return A <= B && B <= C && C <= D && D <= E;
 	}
 // @formatter:on
