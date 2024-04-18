@@ -1,0 +1,23 @@
+Give traces, in the style of the trace given in this section,
+showing how the keys E A S Y Q U E S T I O N are sorted with 
+top-down mergesort and with bottom-up mergesort.
+
+
+
+   E A S Y Q U E S T I O N
+
+1  e a s y q u e s t i o n
+1  A E s y q u e s t i o n
+1  A E S y q u e s t i o n
+1  a e s Q Y u e s t i o n
+1  a e s Q U Y e s t i o n
+1  A E S Q U Y e s t i o n
+
+
+1  A E S Y q u e s i t n o
+1  a e s y E Q S U i t n o
+1  a e s y e q s u I N O T
+
+1  A E E Q S S U Y i n o t
+
+1  a e e q s s u y I N O T

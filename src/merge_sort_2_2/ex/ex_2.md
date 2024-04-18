@@ -30,5 +30,5 @@ top-down mergesort and with bottom-up mergesort.
 7  *A E S Y*q u e s i t n o
 8   a e s y*E Q S U*i t n o
 9   a e s y e q s u*I N O T*
-10 *A E E Q S S U Y*i n o o 
+10 *A E E Q S S U Y*i n o t 
 11 *A E E I N O Q S S T U Y* 

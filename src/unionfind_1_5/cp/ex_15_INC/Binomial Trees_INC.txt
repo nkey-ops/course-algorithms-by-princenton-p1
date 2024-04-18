@@ -1,0 +1,40 @@
+1.5.15 Binomial trees.
+Show that the number of nodes at each level in the worst-case trees for 
+weighted quick-union are binomial coefficients.
+Compute the average depth of a node in a worst-case tree with N = 2n nodes.
+
+   |
+   ||      |       
+  ||||     ||   
+||||||||  ||||  
+        ||||||||
+
+   2 ^ 3
+
+    |
+   |||   
+   ||| 
+      |
+
+
+
+   |   |
+   || | 
+    | | 
+     
+2^4 =16 
+
+what is worst case tree
+
+2^n
+
+why is it
+what is binocial coefficient
+why the three is binomial coefficiet
+
+
+
+EX 
+1.5.24
+1.5.16
+1.5.23
